@@ -12,6 +12,10 @@ export class UsersListComponent implements OnInit {
 
   constructor(private userService: UserService) {}
 
+  hi(name: string): void {
+    alert(`Hi ${name}`);
+  }
+
   ngOnInit(): void {
     this.userService.getUsers().subscribe((data) => {
       console.log({ data });

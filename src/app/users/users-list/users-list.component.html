@@ -1,4 +1,9 @@
 <h2>Lista de usuarios</h2>
 <ul>
-  <li *ngFor="let user of users">{{ user.name }} - {{ user.email }}</li>
+  <app-user-card
+    *ngFor="let user of users"
+    [name]="user.name"
+    [email]="user.email"
+    (hi)="hi($event)"
+  />
 </ul>
